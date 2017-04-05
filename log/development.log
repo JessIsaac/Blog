@@ -4967,3 +4967,107 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 243ms (Views: 231.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 187.250.247.163 at 2017-04-05 16:46:04 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 578ms (Views: 559.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-05 16:46:07 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 32.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 187.250.247.163 at 2017-04-05 16:46:09 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-05 16:46:10 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/8/edit" for 187.250.247.163 at 2017-04-05 16:46:12 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (35.7ms)
+  Rendered articles/edit.html.erb within layouts/application (38.5ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 100ms (Views: 91.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-05 16:46:14 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 58ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/8" for 187.250.247.163 at 2017-04-05 16:46:15 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-05 16:46:16 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/8" for 187.250.247.163 at 2017-04-05 16:46:19 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XnTsAqDN2PSuoGPgdmIF10KCe28whv01ikF3j98tqGe1nFl9ztnFsVc49MtD8O+WuVLJTYHMOiRCcW2yTWJMHQ==", "id"=>"8"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 8]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/articles
+Completed 302 Found in 22ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-05 16:46:19 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
