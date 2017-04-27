@@ -12763,3 +12763,121 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 88ms (Views: 86.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles" for 187.250.247.163 at 2017-04-27 17:16:16 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (82.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 969ms (Views: 938.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-27 17:17:39 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 153ms (Views: 150.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/18/edit" for 187.250.247.163 at 2017-04-27 17:17:54 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered articles/_form.html.erb (39.9ms)
+  Rendered articles/edit.html.erb within layouts/application (43.2ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 115ms (Views: 110.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/articles/18" for 187.250.247.163 at 2017-04-27 17:17:59 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fZSSsItqfUxyoWehr4ut8zjeTGmuwsuUsSzY0S41jyxgfIf2ubftLNbps/M15Kfju/HvgwR9XO3X6FelQQ8WSg==", "article"=>{"title"=>"This is an article with user", "description"=>"Article with a user Updated\r\n"}, "commit"=>"Update Article", "id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "articles" SET "description" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["description", "Article with a user Updated\r\n"], ["updated_at", 2017-04-27 17:17:59 UTC], ["id", 18]]
+  [1m[35m (17.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/articles/18
+Completed 302 Found in 34ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/articles/18" for 187.250.247.163 at 2017-04-27 17:18:00 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 99ms (Views: 94.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-27 17:18:02 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 95.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 187.250.247.163 at 2017-04-27 17:34:39 +0000
+Cannot render console from 187.250.247.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2190ms (Views: 2185.7ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToUsers (20170427175023)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170427175023"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["username", "Jessica"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Exists (26.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "Jessica@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "updated_at" = ?, "password_digest" = ? WHERE "users"."id" = ?[0m  [["email", "jessica@gmail.com"], ["updated_at", 2017-04-27 17:59:27 UTC], ["password_digest", "$2a$10$G9BaksiQ.bMEncX4wYFh6u6129/lHEL7YQTA4KKiiIihK3uJ513B."], ["id", 2]]
+  [1m[35m (29.2ms)[0m  [1m[36mcommit transaction[0m
