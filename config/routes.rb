@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     #post 'users', to: 'users#create'
     #2.- put resources and de name of the resource 
     resources :users, except: [:new]
+    
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy'
     #In this case we don't put the new route because we already have it
 end

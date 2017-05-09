@@ -3,34 +3,35 @@ $navbar-default-bg:#c2e8c2;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 #logo
 {
-    float:right;
+    float: right;
     Font-size: 1.8em;
-    letter-spacing:-2px;
+    letter-spacing: -2px;
     font-style: italic;
     color: #fff;
-    font-weight:bold;
+    font-weight: bold;
     font-family:"Comic Sans MS";
 }
+
 #logo:hover
 {
     color:#fff;
-    text-decoration:none;
-    
+    text-decoration: none;
+}
+#USERNAME
+{
+    width: 160px;
     
 }
-
-
 .article-actions
 {
     border-top: 1px solid #33aa33;
-    padding-top:5px;
+    padding-top: 5px;
 }
 .description 
 {
-    margin-top:0;
+    margin-top: 0;
 }
 .article-title
 {
@@ -39,37 +40,43 @@ $navbar-default-bg:#c2e8c2;
 }
 .article-body
 {
-    border-top:1px solid #33aa33;
+    border-top: 1px solid #33aa33;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .center 
-
 {
     text-align: center;
 }
 .jumbotron
 {
  background-image: asset-url('JumboBG.jpg');  
- background-size:cover;
+ background-size: cover;
  height: 600px;
 }
 
 .jumbotron h1
 {
     color:#fff;
-    text-align:center;
-    letter-spacing:-2px;
-    margin-bottom:40px;
+    text-align: center;
+    letter-spacing: -2px;
+    margin-bottom: 40px;
     font-family:"Comic Sans MS";
-    font-weight:bold;
+    font-weight: bold;
+}
+.jumbotron h2
+{
+    color:#fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family:"Comic Sans MS";
 }
 
 
 .btn-xlarge
 {
-    font-size:1.8em;
+    font-size: 1.8em;
     background-color:#c2e8c2;
 }
 
@@ -86,7 +93,7 @@ $navbar-default-bg:#c2e8c2;
 footer
 {
  margin-top: 45px;   
- padding-top:5px;
+ padding-top: 5px;
  border-top: 2px solid #33aa33;
  color: #777;
 }
@@ -103,14 +110,14 @@ footer small
 
 footer ul
 {
-    float:right;
-    list-style:none;
+    float: right;
+    list-style: none;
 }
 
 footer ul li
 {
-    float:left;
-    margin-left:20px;
+    float: left;
+    margin-left: 20px;
 }
 
 
