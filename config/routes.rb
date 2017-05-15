@@ -16,4 +16,5 @@ Rails.application.routes.draw do
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
     #In this case we don't put the new route because we already have it
+    resources :categories, except: [:destroy]
 end

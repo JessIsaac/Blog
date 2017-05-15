@@ -25692,3 +25692,370 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20170512171114)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170512171114"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 189.223.64.217 at 2017-05-15 17:08:33 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 644ms (Views: 629.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 189.223.64.217 at 2017-05-15 17:08:36 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 165ms (Views: 163.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 17:08:46 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered categories/new.html.erb within layouts/application (39.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 145.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 17:54:07 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 118.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 17:54:22 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Szzme3ss9PHS/sTmffP8zd3xeRxxmy5FDtaYhWuSu1ahWqDlzak7mliX2ngkzAc/ynMGnE1TOgWYmMTt26qUrA==", "category"=>{"name"=>"Sports"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Sports"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sports"], ["created_at", 2017-05-15 17:54:22 UTC], ["updated_at", 2017-05-15 17:54:22 UTC]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 27ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 17:54:22 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 134ms (Views: 71.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 17:55:02 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 189.223.64.217 at 2017-05-15 18:43:42 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 142ms (Views: 139.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:43:46 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (63.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 204ms (Views: 200.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:43:48 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 119ms (Views: 116.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:45:48 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 108ms (Views: 100.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:45:56 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 161ms (Views: 159.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 18:46:07 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T/edP0XoSO5Y8iu39xmQq0EU8En2/ya398vGAn/DPXqlkduh822HhdKbNSmuJmtZVpaPyco3MvdhhZpqz/sSgA==", "category"=>{"name"=>"Gaming"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Gaming"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gaming"], ["created_at", 2017-05-15 18:46:07 UTC], ["updated_at", 2017-05-15 18:46:07 UTC]]
+  [1m[35m (31.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 44ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:46:07 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:46:12 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered categories/new.html.erb within layouts/application (6.0ms)
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:46:12 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 295ms (Views: 293.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 134.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 18:46:18 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTa4QaEmkWPqJl59Hs4cYru3ynyCKcKQufEJrCRXHvdPUP7fF6NeCGBPQONH8eeQrDW1/L7h1tAvv1XElG8xDQ==", "category"=>{"name"=>"Food"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Food"], ["LIMIT", 1]]
+  [1m[35mSQL (6.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Food"], ["created_at", 2017-05-15 18:46:18 UTC], ["updated_at", 2017-05-15 18:46:18 UTC]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 190ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:46:18 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:46:23 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered categories/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:46:23 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered categories/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 18:46:29 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qCc0BropJ9S8QymfhdAErKdnukMY6FqSqmklUfDLEjdCQXKYDKzovzYqNwHc7/9esOXFwyQgTtI8J3k5QPM9zQ==", "category"=>{"name"=>"Music"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Music"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Music"], ["created_at", 2017-05-15 18:46:29 UTC], ["updated_at", 2017-05-15 18:46:29 UTC]]
+  [1m[35m (147.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 157ms (ActiveRecord: 147.9ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:46:29 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:46:35 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered categories/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 18:46:55 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ONyiq9hMo8JMqiHFifOu9nhWh3RkZM44mC6bPDXrZs+hTQUGeT95INbthlPGDVJzmMlne1Zh3h0LuYEQO+CYQ==", "category"=>{"name"=>"Art"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Art"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Art"], ["created_at", 2017-05-15 18:46:55 UTC], ["updated_at", 2017-05-15 18:46:55 UTC]]
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 18ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:46:55 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 86.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 189.223.64.217 at 2017-05-15 18:47:00 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered categories/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 134ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 189.223.64.217 at 2017-05-15 18:47:20 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"packyjiGppP8gvez5bFPIh35x4CNpiWzYxsvGPA1OshPwWJUjgNp+Hbr6S28jrTQCnu4ALFuMfP1VXNwQA0VMg==", "category"=>{"name"=>"Programming"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Programming"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Programming"], ["created_at", 2017-05-15 18:47:20 UTC], ["updated_at", 2017-05-15 18:47:20 UTC]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://ruby-example-jessisaac.c9users.io/categories
+Completed 302 Found in 15ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/categories" for 189.223.64.217 at 2017-05-15 18:47:20 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered categories/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 101.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories?page=2" for 189.223.64.217 at 2017-05-15 18:47:21 +0000
+Cannot render console from 189.223.64.217! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  Rendered categories/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 127.0ms | ActiveRecord: 0.5ms)
+
+
