@@ -4,7 +4,7 @@ class CategoriesControllerTest < ActionController::TestCase
     
     def setup
         @category = Category.create(name: "sports")
-        @user = User.create(username: "AlanPuto", email: "AlanPuto@Alan.com", password: "alanputo", admin: true)
+        @user = User.create(username: "Admin", email: "Admin@correo.com", password: "passw", admin: true)
     end
     
     test "should get categories index" do
